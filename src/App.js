@@ -17,11 +17,14 @@ class App extends Component {
     storageBucket: 'manager-65253.appspot.com',
     messagingSenderId: '908114095727'
   };
-  firebase.initializeApp(config);
+    firebase.initializeApp(config);
   }
+
   render() {
+    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+
     return (
-      <Provider store={createStore(reducers)}>
+      <Provider store={store}>
         <LoginForm />
       </Provider>
     );
