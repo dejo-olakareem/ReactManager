@@ -39,5 +39,8 @@ class EmployeeList extends Component {
   }
 }
 
+const mapStateToProps = state => {
+
+};
 
 export default connect(null, { employeesFetch })(EmployeeList);
