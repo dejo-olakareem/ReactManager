@@ -56,7 +56,7 @@ export const employeeDelete = ({ uid }) => {
   const { currentUser } = firebase.auth();
 
   return () => {
-    firebase.atabase().ref(`/users/${currentUser.uid}/employees/${uid}`)
+    firebase.database().ref(`/users/${currentUser.uid}/employees/${uid}`)
       .remove()
       .then(() => {
         Actions.employeeList();
