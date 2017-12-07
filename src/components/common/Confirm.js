@@ -30,7 +30,7 @@ const Confirm = ({ children, visible, onAccept, onDecline }) => {
 };
 
 const styles = {
-  cardSectionStyle:{
+  cardSectionStyle: {
     justifyContent: 'center'
   },
   textStyle: {
